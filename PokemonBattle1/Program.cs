@@ -1,7 +1,20 @@
-﻿Console.WriteLine("Enter username:");
+﻿using System.Runtime.InteropServices;
 
-string userName = Console.ReadLine();
+class Charmander
+{
+    public string name;
+    public string type;
+    public string weakness;
 
-
-Console.WriteLine("Username is: " + userName);
-
+    public Charmander()
+    {
+        name = Console.ReadLine();
+        type = "Fire";
+        weakness = "Water";
+    }
+    static void Main(string[] args)
+    {
+        Charmander myObj = new Charmander();
+        Console.WriteLine("His name is " + myObj.name);
+    }
+}
