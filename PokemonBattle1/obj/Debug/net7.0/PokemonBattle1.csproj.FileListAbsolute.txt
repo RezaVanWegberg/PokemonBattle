@@ -1,0 +1,15 @@
+C:\Users\rezav\Documents\school\Git2023\PokemonBattle\PokemonBattle1\obj\Debug\net7.0\PokemonBattle1.csproj.AssemblyReference.cache
+C:\Users\rezav\Documents\school\Git2023\PokemonBattle\PokemonBattle1\obj\Debug\net7.0\PokemonBattle1.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\rezav\Documents\school\Git2023\PokemonBattle\PokemonBattle1\obj\Debug\net7.0\PokemonBattle1.AssemblyInfoInputs.cache
+C:\Users\rezav\Documents\school\Git2023\PokemonBattle\PokemonBattle1\obj\Debug\net7.0\PokemonBattle1.AssemblyInfo.cs
+C:\Users\rezav\Documents\school\Git2023\PokemonBattle\PokemonBattle1\obj\Debug\net7.0\PokemonBattle1.csproj.CoreCompileInputs.cache
+C:\Users\rezav\Documents\school\Git2023\PokemonBattle\PokemonBattle1\bin\Debug\net7.0\PokemonBattle1.exe
+C:\Users\rezav\Documents\school\Git2023\PokemonBattle\PokemonBattle1\bin\Debug\net7.0\PokemonBattle1.deps.json
+C:\Users\rezav\Documents\school\Git2023\PokemonBattle\PokemonBattle1\bin\Debug\net7.0\PokemonBattle1.runtimeconfig.json
+C:\Users\rezav\Documents\school\Git2023\PokemonBattle\PokemonBattle1\bin\Debug\net7.0\PokemonBattle1.dll
+C:\Users\rezav\Documents\school\Git2023\PokemonBattle\PokemonBattle1\bin\Debug\net7.0\PokemonBattle1.pdb
+C:\Users\rezav\Documents\school\Git2023\PokemonBattle\PokemonBattle1\obj\Debug\net7.0\PokemonBattle1.dll
+C:\Users\rezav\Documents\school\Git2023\PokemonBattle\PokemonBattle1\obj\Debug\net7.0\refint\PokemonBattle1.dll
+C:\Users\rezav\Documents\school\Git2023\PokemonBattle\PokemonBattle1\obj\Debug\net7.0\PokemonBattle1.pdb
+C:\Users\rezav\Documents\school\Git2023\PokemonBattle\PokemonBattle1\obj\Debug\net7.0\PokemonBattle1.genruntimeconfig.cache
+C:\Users\rezav\Documents\school\Git2023\PokemonBattle\PokemonBattle1\obj\Debug\net7.0\ref\PokemonBattle1.dll
