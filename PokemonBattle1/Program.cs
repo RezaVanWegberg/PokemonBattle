@@ -1,4 +1,5 @@
 ﻿using System.Runtime.InteropServices;
+using System.Security.Cryptography.X509Certificates;
 
 bool GameStart = true;
 while(GameStart)
@@ -20,6 +21,7 @@ while (StartOver)
 
     for (int i = 0; i < 10; i++)
     {
+        Thread.Sleep(1000);
         myCharmander.battleCry();
     }
 
@@ -50,7 +52,8 @@ class Charmander
 
     public void battleCry()
     {
-        Console.WriteLine(name);
+        Console.WriteLine(name + " used battlecry!");
+        Console.WriteLine(name + "!");
     }
 }
 
