@@ -16,8 +16,12 @@ while (StartOver)
 {
     Console.WriteLine("Enter a name for charmander");
     string userInput = Console.ReadLine();
-    Charmander myObj = new Charmander(userInput, "Fire", "Water");
-    Console.WriteLine("His name is " + myObj.name);
+    Charmander myCharmander = new Charmander(userInput, "Fire", "Water");
+
+    for (int i = 0; i < 10; i++)
+    {
+        myCharmander.battleCry();
+    }
 
     Console.WriteLine("Start over? answer with Y/N");
     string VraagStartOver = Console.ReadLine();
@@ -42,6 +46,11 @@ class Charmander
         name = inputName;
         type = inputType;
         weakness = inputWeakness;
+    }
+
+    public void battleCry()
+    {
+        Console.WriteLine(name);
     }
 }
 
