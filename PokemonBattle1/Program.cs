@@ -11,10 +11,25 @@ while(GameStart)
     }
 }
 
-Console.WriteLine("Enter a name for charmander");
-        string userInput = Console.ReadLine();
-        Charmander myObj = new Charmander(userInput);
-        Console.WriteLine("His name is " + myObj.name);
+bool StartOver = true;
+while (StartOver)
+{
+    Console.WriteLine("Enter a name for charmander");
+    string userInput = Console.ReadLine();
+    Charmander myObj = new Charmander(userInput, "Fire", "Water");
+    Console.WriteLine("His name is " + myObj.name);
+
+    Console.WriteLine("Start over? answer with Y/N");
+    string VraagStartOver = Console.ReadLine();
+    if (VraagStartOver == "Y")
+    {
+        StartOver = true;
+    }
+    else if (VraagStartOver == "N")
+    {
+        StartOver = false;
+    }
+}
 
 class Charmander
 {
@@ -22,10 +37,12 @@ class Charmander
     public string type;
     public string weakness;
 
-    public Charmander(string input)
+    public Charmander(string inputName, string inputType, string inputWeakness)
     {
-        name = input;
-        type = "Fire";
-        weakness = "Water";
+        name = inputName;
+        type = inputType;
+        weakness = inputWeakness;
     }
 }
+
+
