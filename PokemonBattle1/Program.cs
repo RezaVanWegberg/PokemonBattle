@@ -15,17 +15,22 @@ while(GameStart)
 bool StartOver = true;
 while (StartOver)
 {
-    Console.WriteLine("Enter a name for charmander");
+    Console.WriteLine("Enter a name for trainer 1");
     string userInput = Console.ReadLine();
-    Charmander myCharmander = new Charmander(userInput, "Fire", "Water");
-    
-    Pokeball greatBall = new Pokeball(myCharmander.name);
 
-    for (int i = 0; i < 10; i++)
-    {
-        Thread.Sleep(1000);
-        myCharmander.battleCry();
-    }
+    Trainer trainer1 = new Trainer(userInput);
+    trainer1.givePokeball(new Pokeball(new Charmander("Charmander 1", "Fire", "Water")));
+
+    Console.WriteLine("Enter a name for trainer 2");
+    string userInput2 = Console.ReadLine();
+
+    Trainer trainer2 = new Trainer(userInput2);
+    trainer2.givePokeball(new Pokeball(new Charmander("Charmander 2", "Fire", "Water")));
+
+    trainer1.throwPokeball(0);
+    trainer2.throwPokeball(0);
+
+
 
     Console.WriteLine("Start over? answer with Y/N");
     string VraagStartOver = Console.ReadLine();
@@ -38,22 +43,52 @@ while (StartOver)
     {
         StartOver = false;
         Console.WriteLine("test");
-        Console.WriteLine(greatBall.CharmanderInPokeball.name);
 
+    } else
+    {
+        StartOver &= false;
     }
 }
 
 class Pokeball
 {
-    public Pokeball(string pokemon)
+    public Charmander charmander;
+    
+    public Pokeball(Charmander charmander)
     {
-        List<string> pokeballList = new List<string>(1);
-        pokeballList.Add(pokemon);
-        Console.WriteLine("check dat ie er in zit" + pokeballList[0]); //test om te kijken of de pokemon in de pokebal zit
+        this.charmander = charmander;
+
+        Console.WriteLine("check dat ie er in zit :" + charmander.name); //test om te kijken of de pokemon in de pokebal zit
 
     }
 
-    public Charmander CharmanderInPokeball { get; set; }
+    public void openPokeball(List<Charmander> pokemon)       //werkt nog niet
+    {
+        Console.WriteLine(pokemon[0].name + " came out!");
+        pokemon.RemoveAt(0);
+    }
+}
+
+class Trainer {
+    public List<Pokeball> belt;
+    public string name;
+
+    public Trainer(string input)
+    {
+        name = input;
+        belt = new List<Pokeball>();
+    }
+
+    public void givePokeball(Pokeball pokeball)
+    {
+        belt.Add(pokeball);
+    }
+
+    public void throwPokeball(int number)
+    {
+        belt[number].charmander.battleCry();
+        /*belt.Remove(belt[number]);*/
+    }
 }
 
 
