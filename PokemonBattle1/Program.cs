@@ -16,20 +16,21 @@ bool StartOver = true;
 while (StartOver)
 {
     Console.WriteLine("Enter a name for trainer 1");
-    string userInput = Console.ReadLine();
+    string nameTrainer1 = Console.ReadLine();
 
-    Trainer trainer1 = new Trainer(userInput);
-    trainer1.givePokeball(new Pokeball(new Charmander("Charmander 1", "Fire", "Water")));
+    Trainer trainer1 = new Trainer(nameTrainer1);
+    trainer1.givePokeball(new Pokeball(new Charmander("Charmander", "Fire", "Water")));
 
     Console.WriteLine("Enter a name for trainer 2");
-    string userInput2 = Console.ReadLine();
+    string nameTrainer2 = Console.ReadLine();
 
-    Trainer trainer2 = new Trainer(userInput2);
-    trainer2.givePokeball(new Pokeball(new Charmander("Charmander 2", "Fire", "Water")));
+    Trainer trainer2 = new Trainer(nameTrainer2);
+    trainer2.givePokeball(new Pokeball(new Charmander("Charmander", "Fire", "Water")));
 
-    trainer1.throwPokeball(0);
-    trainer2.throwPokeball(0);
-
+    trainer1.throwPokeball(0, nameTrainer1);
+    trainer2.throwPokeball(0, nameTrainer2);
+    trainer1.returnToPokeball(nameTrainer1);
+    trainer2.returnToPokeball(nameTrainer2);
 
 
     Console.WriteLine("Start over? answer with Y/N");
@@ -58,8 +59,8 @@ class Pokeball
     {
         this.charmander = charmander;
 
-        Console.WriteLine("check dat ie er in zit :" + charmander.name); //test om te kijken of de pokemon in de pokebal zit
-
+        /*Console.WriteLine("check dat ie er in zit :" + charmander.name); //test om te kijken of de pokemon in de pokebal zit
+*/
     }
 
     public void openPokeball(List<Charmander> pokemon)       //werkt nog niet
@@ -84,10 +85,17 @@ class Trainer {
         belt.Add(pokeball);
     }
 
-    public void throwPokeball(int number)
+    public void throwPokeball(int number, string name)
     {
+        Console.WriteLine(name + " throws a pokeball");
         belt[number].charmander.battleCry();
         /*belt.Remove(belt[number]);*/
+
+    }
+
+    public void returnToPokeball(string name)
+    {
+        Console.WriteLine(name + " returns the pokemon");
     }
 }
 
