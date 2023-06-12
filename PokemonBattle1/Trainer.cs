@@ -29,13 +29,17 @@ namespace PokemonBattle1
             
             Pokeball pokeball = belt[number];
 
-            pokeball.Throw(name);
+            pokeball.Thrown();
             
         }
 
         public void returnToPokeball(int number, string name)
         {
             Console.WriteLine(name + " returns " + belt[number].pokemon.name);
+
+            Pokeball pokeball = belt[number];
+
+            pokeball.Close();
         }
     }
 
