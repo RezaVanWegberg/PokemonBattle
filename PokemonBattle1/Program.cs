@@ -25,20 +25,37 @@ namespace PokemonBattle1
                 Console.WriteLine("Enter a name for trainer 1");
                 string nameTrainer1 = Console.ReadLine();
 
-                Trainer trainer1 = new Trainer(nameTrainer1);
-                trainer1.givePokeball(new Pokeball(new Pokemon("Charmander", "Fire", "Water")));
-
                 Console.WriteLine("Enter a name for trainer 2");
                 string nameTrainer2 = Console.ReadLine();
 
+                Trainer trainer1 = new Trainer(nameTrainer1);
+                trainer1.givePokeball(new Pokeball(new Pokemon("Charmander", "Fire", "Water")));
+                trainer1.givePokeball(new Pokeball(new Pokemon("Bulbasaur", "Grass", "Fire")));
+/*                trainer1.givePokeball(new Pokeball(new Pokemon("Mudkip", "Water", "Grass")));
+                trainer1.givePokeball(new Pokeball(new Pokemon("Chimchar", "Fire", "Water")));
+                trainer1.givePokeball(new Pokeball(new Pokemon("Chespin", "Grass", "Fire")));
+                trainer1.givePokeball(new Pokeball(new Pokemon("Froakie", "Water", "Grass")));*/
+
                 Trainer trainer2 = new Trainer(nameTrainer2);
-                trainer2.givePokeball(new Pokeball(new Pokemon("Squirtle", "Fire", "Water")));
+                trainer2.givePokeball(new Pokeball(new Pokemon("Squirtle", "Water", "Grass")));
+                trainer2.givePokeball(new Pokeball(new Pokemon("Torchic", "Fire", "Water")));
+/*                trainer2.givePokeball(new Pokeball(new Pokemon("Treecko", "Grass", "Fire")));
+                trainer2.givePokeball(new Pokeball(new Pokemon("Piplup", "Water", "Grass")));
+                trainer2.givePokeball(new Pokeball(new Pokemon("Tepig", "Fire", "Water")));
+                trainer2.givePokeball(new Pokeball(new Pokemon("Snivy", "Grass", "Fire")));*/
 
-                trainer1.throwPokeball(0, nameTrainer1);
-                trainer2.throwPokeball(0, nameTrainer2);
-                trainer1.returnToPokeball(0, nameTrainer1);
-                trainer2.returnToPokeball(0, nameTrainer2);
+                for (int i = 0; i < trainer1.belt.Count || i < trainer2.belt.Count; i++)
+                {
 
+                    trainer1.throwPokeball(i, nameTrainer1);
+                    Thread.Sleep(600);
+                    trainer2.throwPokeball(i, nameTrainer2);
+                    Thread.Sleep(600);
+                    trainer1.returnToPokeball(i, nameTrainer1);
+                    Thread.Sleep(600);
+                    trainer2.returnToPokeball(i, nameTrainer2);
+                    Thread.Sleep(600);
+                }
 
                 Console.WriteLine("Start over? answer with Y/N");
                 string VraagStartOver = Console.ReadLine();

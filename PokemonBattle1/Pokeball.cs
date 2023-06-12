@@ -3,26 +3,31 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace PokemonBattle1
 {
     class Pokeball
     {
         public Pokemon pokemon;
+        public bool isEmpty;
 
-        public Pokeball(Pokemon charmander)
+        public Pokeball(Pokemon pokemon)
         {
-            this.pokemon = charmander;
-
-            /*Console.WriteLine("check dat ie er in zit :" + charmander.name); //test om te kijken of de pokemon in de pokebal zit
-    */
+            this.pokemon = pokemon;
+            isEmpty = false;
         }
 
-        /* public void openPokeball(List<Charmander> pokemon)       //werkt nog niet
-         {
-             Console.WriteLine(pokemon[0].name + " came out!");
-             pokemon.RemoveAt(0);
-         }*/
+        public void Throw(string name)
+        {
+            Console.WriteLine(pokemon.name + " got released!");
+            Thread.Sleep(300);
+            pokemon.battleCry();
+        }
+
+
+
 
     }
 }
+

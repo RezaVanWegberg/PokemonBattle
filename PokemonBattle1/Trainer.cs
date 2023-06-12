@@ -25,10 +25,12 @@ namespace PokemonBattle1
         public void throwPokeball(int number, string name)
         {
             Console.WriteLine(name + " throws a pokeball");
-            Console.WriteLine(belt[number].pokemon.name + " got released!");
-            belt[number].pokemon.battleCry();
-            /*belt.Remove(belt[number]);*/
+            Thread.Sleep(300);
+            
+            Pokeball pokeball = belt[number];
 
+            pokeball.Throw(name);
+            
         }
 
         public void returnToPokeball(int number, string name)
