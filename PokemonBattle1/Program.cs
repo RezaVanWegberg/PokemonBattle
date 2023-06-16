@@ -30,31 +30,24 @@ namespace PokemonBattle1
 
                 Trainer trainer1 = new Trainer(nameTrainer1);
                 trainer1.givePokeball(new Pokeball(new Charmander()));
-                trainer1.givePokeball(new Pokeball(new Squirtle()));
                 trainer1.givePokeball(new Pokeball(new Chikorita()));
+                trainer1.givePokeball(new Pokeball(new Squirtle()));
                 trainer1.givePokeball(new Pokeball(new Torchic()));
                 trainer1.givePokeball(new Pokeball(new Oshawott()));
                 trainer1.givePokeball(new Pokeball(new Snivy()));
 
                 Trainer trainer2 = new Trainer(nameTrainer2);
                 trainer2.givePokeball(new Pokeball(new Bulbasaur()));
-                trainer2.givePokeball(new Pokeball(new Cyndaquil()));
                 trainer2.givePokeball(new Pokeball(new Totodile()));
+                trainer2.givePokeball(new Pokeball(new Cyndaquil()));
                 trainer2.givePokeball(new Pokeball(new Rowlet()));
                 trainer2.givePokeball(new Pokeball(new Fennekin()));
                 trainer2.givePokeball(new Pokeball(new Mudkip()));
-                for (int i = 0; i < trainer1.belt.Count || i < trainer2.belt.Count; i++)
-                {
 
-                    trainer1.throwPokeball(i, nameTrainer1);
-                    Thread.Sleep(600);
-                    trainer2.throwPokeball(i, nameTrainer2);
-                    Thread.Sleep(600);
-                    trainer1.returnToPokeball(i, nameTrainer1);
-                    Thread.Sleep(600);
-                    trainer2.returnToPokeball(i, nameTrainer2);
-                    Thread.Sleep(600);
-                }
+
+                Arena arena = new Arena(trainer1, trainer2);
+                arena.arenaBattle();
+
 
                 Console.WriteLine("Start over? answer with Y/N");
                 string VraagStartOver = Console.ReadLine();

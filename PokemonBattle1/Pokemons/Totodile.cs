@@ -4,7 +4,7 @@ namespace PokemonBattle1
 {
     class Totodile : Pokemon
     {
-        public Totodile() : base("Totodile", "Water", "Water") { }
+        public Totodile() : base("Totodile", "Water", "Grass") { }
 
         public override void battleCry()
         {
