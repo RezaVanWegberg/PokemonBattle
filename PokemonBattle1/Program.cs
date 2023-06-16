@@ -29,21 +29,20 @@ namespace PokemonBattle1
                 string nameTrainer2 = Console.ReadLine();
 
                 Trainer trainer1 = new Trainer(nameTrainer1);
-                trainer1.givePokeball(new Pokeball(new Charmander()));/*
-                trainer1.givePokeball(new Pokeball(new Pokemon("Bulbasaur", "Grass", "Fire")));
-                trainer1.givePokeball(new Pokeball(new Pokemon("Mudkip", "Water", "Grass")));
-                trainer1.givePokeball(new Pokeball(new Pokemon("Chimchar", "Fire", "Water")));
-                trainer1.givePokeball(new Pokeball(new Pokemon("Chespin", "Grass", "Fire")));
-                trainer1.givePokeball(new Pokeball(new Pokemon("Froakie", "Water", "Grass")));*/
+                trainer1.givePokeball(new Pokeball(new Charmander()));
+                trainer1.givePokeball(new Pokeball(new Squirtle()));
+                trainer1.givePokeball(new Pokeball(new Chikorita()));
+                trainer1.givePokeball(new Pokeball(new Torchic()));
+                trainer1.givePokeball(new Pokeball(new Oshawott()));
+                trainer1.givePokeball(new Pokeball(new Snivy()));
 
                 Trainer trainer2 = new Trainer(nameTrainer2);
-                trainer2.givePokeball(new Pokeball(new Squirtle()));/*
-                trainer2.givePokeball(new Pokeball(new Pokemon("Torchic", "Fire", "Water")));
-                trainer2.givePokeball(new Pokeball(new Pokemon("Treecko", "Grass", "Fire")));
-                trainer2.givePokeball(new Pokeball(new Pokemon("Piplup", "Water", "Grass")));
-                trainer2.givePokeball(new Pokeball(new Pokemon("Tepig", "Fire", "Water")));
-                trainer2.givePokeball(new Pokeball(new Pokemon("Snivy", "Grass", "Fire")));*/
-
+                trainer2.givePokeball(new Pokeball(new Bulbasaur()));
+                trainer2.givePokeball(new Pokeball(new Cyndaquil()));
+                trainer2.givePokeball(new Pokeball(new Totodile()));
+                trainer2.givePokeball(new Pokeball(new Rowlet()));
+                trainer2.givePokeball(new Pokeball(new Fennekin()));
+                trainer2.givePokeball(new Pokeball(new Mudkip()));
                 for (int i = 0; i < trainer1.belt.Count || i < trainer2.belt.Count; i++)
                 {
 

@@ -4,7 +4,7 @@ namespace PokemonBattle1
 {
     class Squirtle : Pokemon
     {
-        public Squirtle() : base("Squirtle", "Fire", "Water") { }
+        public Squirtle() : base("Squirtle", "Water", "Grass") { }
 
         public override void battleCry()
         {
