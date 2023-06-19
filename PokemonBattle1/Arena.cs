@@ -22,10 +22,22 @@ namespace PokemonBattle1
 
         public void arenaBattle()
         {
+            Trainer.Shuffle(trainer1.belt);
+            Trainer.Shuffle(trainer2.belt);
+
             int currentBattle = 0;
             while (currentBattle == 0)
 
             {
+                Console.WriteLine("------------------");
+                Console.WriteLine("");
+                Console.WriteLine($"{trainer1.name}'s {trainer1.belt[currentPokemon1].pokemon.name}" );
+                Console.WriteLine("");
+                Console.WriteLine($"{trainer2.name}'s {trainer2.belt[currentPokemon2].pokemon.name}");
+                Console.WriteLine("");
+                Console.WriteLine("------------------");
+
+
                 Battle battle = new Battle();
 
                 winner = battle.battle(trainer1.belt[currentPokemon1].pokemon, trainer2.belt[currentPokemon2].pokemon);
