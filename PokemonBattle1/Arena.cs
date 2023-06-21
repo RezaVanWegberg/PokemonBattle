@@ -22,8 +22,8 @@ namespace PokemonBattle1
 
         public void arenaBattle()
         {
-            Trainer.Shuffle(trainer1.belt);
-            Trainer.Shuffle(trainer2.belt);
+            Trainer.Shuffle(trainer1.Belt);
+            Trainer.Shuffle(trainer2.Belt);
 
             int currentBattle = 0;
             while (currentBattle == 0)
@@ -31,16 +31,16 @@ namespace PokemonBattle1
             {
                 Console.WriteLine("------------------");
                 Console.WriteLine("");
-                Console.WriteLine($"{trainer1.name}'s {trainer1.belt[currentPokemon1].pokemon.name}" );
+                Console.WriteLine($"{trainer1.Name}'s {trainer1.Belt[currentPokemon1].Pokemon.Name}" );
                 Console.WriteLine("");
-                Console.WriteLine($"{trainer2.name}'s {trainer2.belt[currentPokemon2].pokemon.name}");
+                Console.WriteLine($"{trainer2.Name}'s {trainer2.Belt[currentPokemon2].Pokemon.Name}");
                 Console.WriteLine("");
                 Console.WriteLine("------------------");
 
 
                 Battle battle = new Battle();
 
-                winner = battle.battle(trainer1.belt[currentPokemon1].pokemon, trainer2.belt[currentPokemon2].pokemon);
+                winner = battle.battle(trainer1.Belt[currentPokemon1].Pokemon, trainer2.Belt[currentPokemon2].Pokemon);
                 Thread.Sleep(1000);
 
                 if (winner == GameState.Draw)
@@ -56,11 +56,11 @@ namespace PokemonBattle1
                 {
                     currentPokemon2++;
                 }
-                if (trainer1.belt.Count <= currentPokemon1)
+                if (trainer1.Belt.Count <= currentPokemon1)
                 {
                     currentBattle = 1;
                 }
-                else if (trainer2.belt.Count <= currentPokemon2)
+                else if (trainer2.Belt.Count <= currentPokemon2)
                 {
                     currentBattle = 1;
                 }

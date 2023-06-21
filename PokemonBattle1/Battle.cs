@@ -13,22 +13,22 @@ namespace PokemonBattle1
         }
         public GameState battle(Pokemon pokemon1, Pokemon pokemon2) 
         {
-            if (pokemon1.type == pokemon2.weakness)
+            if (pokemon1.Type == pokemon2.Weakness)
             {
                 Console.WriteLine("");
-                Console.WriteLine(pokemon1.name + " wins, trainer1 won");
+                Console.WriteLine(pokemon1.Name + " wins, trainer1 won");
                 Console.WriteLine("");
                 return GameState.Trainer1;
             }
-            else if (pokemon2.type == pokemon1.weakness)
+            else if (pokemon2.Type == pokemon1.Weakness)
             {
                 Console.WriteLine("");
-                Console.WriteLine(pokemon2.name + " wins, trainer2 won");
+                Console.WriteLine(pokemon2.Name + " wins, trainer2 won");
                 Console.WriteLine("");
                 return GameState.Trainer2;
             }
 
-            else if (pokemon1.type == pokemon2.type)
+            else if (pokemon1.Type == pokemon2.Type)
             {
                 Console.WriteLine("");
                 Console.WriteLine("it's a draw");
@@ -37,9 +37,7 @@ namespace PokemonBattle1
             }
             else
             {
-                Console.WriteLine("");
                 return GameState.Draw;
-                Console.WriteLine("");
             }
         } 
     }

@@ -8,9 +8,9 @@ namespace PokemonBattle1
 {
     abstract class Pokemon
     {
-        public string name;
-        public string type;
-        public string weakness;
+        private readonly string name;
+        private readonly string type;
+        private readonly string weakness;
 
         public Pokemon(string name, string type, string weakness)
         {
@@ -19,7 +19,22 @@ namespace PokemonBattle1
             this.weakness = weakness;
         }
 
+        public string Name
+        {
+            get { return name; }
+        }
+
+        public string Type
+        {
+            get { return type; }
+        }
+
+        public string Weakness
+        {
+            get { return weakness; }
+        }
+
         public abstract void battleCry();
-        
+
     }
 }

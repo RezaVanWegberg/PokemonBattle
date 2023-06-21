@@ -8,13 +8,23 @@ namespace PokemonBattle1
 {
     class Trainer
     {
-        public List<Pokeball> belt;
-        public string name;
+        private List<Pokeball> belt;
+        private string name;
 
         public Trainer(string name)
         {
             this.name = name;
             belt = new List<Pokeball>();
+        }
+
+        public List<Pokeball> Belt
+        {
+            get { return belt; }
+        }
+
+        public string Name
+        { 
+            get { return name; } 
         }
 
         public void givePokeball(Pokeball pokeball)
@@ -36,7 +46,7 @@ namespace PokemonBattle1
 
         public void returnToPokeball(int number, string name)
         {
-            Console.WriteLine(name + " returns " + belt[number].pokemon.name);
+            Console.WriteLine(name + " returns " + belt[number].Pokemon.Name);
 
             Pokeball pokeball = belt[number];
 
