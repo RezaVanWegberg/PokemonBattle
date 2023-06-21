@@ -4,7 +4,7 @@ namespace PokemonBattle1
 {
 	class Charmander : Pokemon
     {
-        public Charmander() : base("Charmander", "Fire", "Water") { }
+        public Charmander() : base("Charmander", Element.Fire, Element.Water) { }
         
         public override void battleCry()
         {

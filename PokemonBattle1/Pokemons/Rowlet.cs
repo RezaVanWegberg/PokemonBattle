@@ -4,7 +4,7 @@ namespace PokemonBattle1
 {
     class Rowlet : Pokemon
     {
-        public Rowlet() : base("Rowlet", "Grass", "Fire") { }
+        public Rowlet() : base("Rowlet", Element.Grass, Element.Fire) { }
 
         public override void battleCry()
         {

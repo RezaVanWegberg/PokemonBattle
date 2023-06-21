@@ -29,7 +29,14 @@ namespace PokemonBattle1
 
         public void givePokeball(Pokeball pokeball)
         {
+            if (belt.Count < 6)
+            {
             belt.Add(pokeball);
+
+            } else
+            {
+                throw new Exception("The belt is full.");
+            }
         }
 
         public void throwPokeball(int number, string name)

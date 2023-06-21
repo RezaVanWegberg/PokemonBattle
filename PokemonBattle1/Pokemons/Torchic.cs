@@ -4,7 +4,7 @@ namespace PokemonBattle1
 {
     class Torchic : Pokemon
     {
-        public Torchic() : base("Torchic", "Fire", "Water") { }
+        public Torchic() : base("Torchic", Element.Fire, Element.Water) { }
 
         public override void battleCry()
         {

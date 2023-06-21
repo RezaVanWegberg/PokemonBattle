@@ -4,7 +4,7 @@ namespace PokemonBattle1
 {
     class Chikorita : Pokemon
     {
-        public Chikorita() : base("Chikorita", "Grass", "Fire") { }
+        public Chikorita() : base("Chikorita", Element.Grass, Element.Fire) { }
 
         public override void battleCry()
         {

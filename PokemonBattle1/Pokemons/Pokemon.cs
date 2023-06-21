@@ -8,11 +8,19 @@ namespace PokemonBattle1
 {
     abstract class Pokemon
     {
-        private readonly string name;
-        private readonly string type;
-        private readonly string weakness;
+        public enum Element
+        {
+            Fire,
+            Water,
+            Grass
+        }
 
-        public Pokemon(string name, string type, string weakness)
+
+        private readonly string name;
+        private readonly Element type;
+        private readonly Element weakness;
+
+        public Pokemon(string name, Element type, Element weakness)
         {
             this.name = name;
             this.type = type;
@@ -24,12 +32,12 @@ namespace PokemonBattle1
             get { return name; }
         }
 
-        public string Type
+        public Element Type
         {
             get { return type; }
         }
 
-        public string Weakness
+        public Element Weakness
         {
             get { return weakness; }
         }

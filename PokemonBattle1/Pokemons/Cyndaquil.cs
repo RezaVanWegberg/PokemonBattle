@@ -4,7 +4,7 @@ namespace PokemonBattle1
 {
     class Cyndaquil : Pokemon
     {
-        public Cyndaquil() : base("Cyndaquil", "Fire", "Water") { }
+        public Cyndaquil() : base("Cyndaquil", Element.Fire, Element.Water) { }
 
         public override void battleCry()
         {

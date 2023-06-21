@@ -30,6 +30,7 @@ namespace PokemonBattle1
 
                 Trainer trainer1 = new Trainer(nameTrainer1);
                 trainer1.givePokeball(new Pokeball(new Charmander()));
+                trainer1.givePokeball(new Pokeball(new Charmander()));
                 trainer1.givePokeball(new Pokeball(new Chikorita()));
                 trainer1.givePokeball(new Pokeball(new Squirtle()));
                 trainer1.givePokeball(new Pokeball(new Torchic()));
